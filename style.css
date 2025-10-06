@@ -244,9 +244,116 @@ body {
     margin-bottom: 0.5rem;
     color: var(--white);
 }
+ .botao-whatsapp{
+    background-color:var(--secondary-dark);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
 
+.botao-whatsapp:hover{
+    background-color: var(--neon-red);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+.whatsappcard {
+    color: var(--neon-red);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+.whatsappcard:hover{
+    color: var(--secondary-dark);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+
+.catalogo-produtos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 4fr); 
+    gap: 2rem;
+}
+
+.produto-card {
+    width: auto;
+    height: auto;
+    background: var(--secondary-dark);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-red);
+    box-shadow: var(--shadow-glow);
+}
+
+.produto-imagem {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.1);
+}
+
+/* Informações do Produto */
+
+.infos{
+    text-align: justify;
+    padding: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 1.1rem;
+
+}
+
+.produto-destaque {
+    display: block;
+    background-color: #CE171F;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-nome {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--neon-red);
+    margin-bottom: 0.5rem;
+   
+}
+
+.produto-descricao {
+    color: #666;
+    line-height: 1.6;
+}
 /* Inventory Sections */
-.inventory, .weekly-offers, .price-drop {
+.inventory, .price-drop {
     padding: 5rem 0;
 }
 
@@ -254,15 +361,12 @@ body {
     background: var(--primary-dark);
 }
 
-.weekly-offers {
-    background: var(--secondary-dark);
-}
 
 .price-drop {
     background: var(--primary-dark);
 }
 
-.inventory h2, .weekly-offers h2, .price-drop h2 {
+.inventory h2, .price-drop h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -399,7 +503,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 5rem 0;
-    background: var(--secondary-dark);
+    background: var(--primary-dark);
 }
 
 .contact h2 {
@@ -472,7 +576,7 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--primary-dark);
+    background: var(--secondary-dark);
     padding: 3rem 0 1rem;
     border-top: 1px solid var(--tertiary-dark);
 }
@@ -563,85 +667,6 @@ body {
     box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: var(--secondary-dark);
-    margin: 5% auto;
-    padding: 2rem;
-    border: 1px solid var(--neon-red);
-    border-radius: var(--border-radius);
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    box-shadow: var(--shadow-glow);
-    animation: modalSlide 0.3s ease-out;
-}
-
-@keyframes modalSlide {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.close {
-    color: var(--gray-light);
-    float: right;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.close:hover {
-    color: var(--neon-red);
-    text-shadow: 0 0 10px var(--neon-red-glow);
-}
-
-.modal-vehicle-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
-}
-
-.modal-vehicle-info h3 {
-    color: var(--neon-red);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-red-glow);
-}
-
-.modal-vehicle-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.detail-item {
-    background: var(--tertiary-dark);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 0, 64, 0.1);
-}
-
-.detail-item strong {
-    color: var(--neon-red);
-    display: block;
-    margin-bottom: 0.5rem;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -706,42 +731,252 @@ body {
         height: 50px;
         font-size: 1.25rem;
     }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Header Mobile */
+    .header-principal .container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.2rem 15px;
+        margin: 0px;
+    }
 
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
+    strong{
+        font-size: 12px;
+
+    }
+    
+    .botao-whatsapp{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+
+.botao-whatsapp:hover{
+    background-color: rgb(0, 255, 0);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+.whatsappcard {
+    color: rgb(0, 255, 0);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+.whatsappcard:hover{
+    color: rgb(255, 255, 255);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+
+    .menu-lista {
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .menu-link {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .logo {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #E72222;
+}
+
+    .conteudo-principal {
+        margin-top: 120px;
+    }
+
+    /* Banner Mobile */
+    .banner-titulo {
+        font-size: 2.5rem;
+    }
+
+    .banner-subtitulo {
+        font-size: 1.1rem;
+    }
+
+    /* Seções Mobile */
+    section {
+        padding: 3rem 0;
+    }
+
+    .secao-titulo {
+        font-size: 2rem;
+    }
+
+    .secao-header{
+        margin-bottom: 10px;
+    }
+
+    /* Sobre Mobile */
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sobre-imagem img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        
+    }
+
+    /* Produtos Mobile - 2 por linha */
+    .catalogo-produtos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.0rem;
+    }
+
+    .produto-imagem {
+        height: 200px;
+    }
+
+    .produto-info {
         padding: 1rem;
     }
 
-    .modal-vehicle-details {
+    .produto-nome {
+        font-size: 1.0rem;
+        text-align: center;
+    }
+
+    .produto-descricao {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    /* Contato Mobile */
+    .contato-info {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        
+    }
+    .contato-info a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Botão Flutuante Mobile */
+    .botao-flutuante {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .botao-icone {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas */
     .container {
         padding: 0 15px;
     }
+    .botao-whatsapp{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
 
-    .hero-content h2 {
+.botao-whatsapp:hover{
+    background-color: rgb(0, 255, 0);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+.whatsappcard {
+    color: rgb(0, 255, 0);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+.whatsappcard:hover{
+    color: rgb(255, 255, 255);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+
+    .banner-titulo {
         font-size: 2rem;
     }
 
-    .cta-button {
-        padding: 0.75rem 1.5rem;
+    .banner-subtitulo {
         font-size: 1rem;
     }
 
-    .vehicle-card {
-        margin: 0 10px;
+    .logo {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #E72222;
+}
+
+    .botao-cta {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
+    .secao-titulo {
+        font-size: 1.8rem;
     }
 
-    .contact-item i {
-        margin-top: 0;
+    .secao-subtitulo {
+        font-size: 1rem;
     }
+
+    /* Produtos em telas muito pequenas */
+    .catalogo-produtos {
+        gap: 1rem;
+    }
+
+    .produto-imagem {
+        height: 180px;
+    }
+
+    .botao-whatsapp{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+
+.botao-whatsapp:hover{
+    background-color: rgb(0, 255, 0);
+    border-radius: 20%;
+    float: right;
+    border: none;
+}
+.whatsappcard {
+    color: rgb(0, 255, 0);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
+.whatsappcard:hover{
+    color: rgb(255, 255, 255);
+    display: inline;
+    width: 100%;
+    text-align: center; 
+    padding: 10px;  
+}
 }
