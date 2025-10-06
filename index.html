@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Motors - Sua Loja de Carros de Confiança</title>
+    <meta name="description" content="Leonardo Veículos - A melhor loja de carros com ofertas imperdíveis e atendimento de qualidade">
+    <link rel="icon" href="https://lumi.new/lumi.ing/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Leonardo <span>MOTORS</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre a Loja</a></li>
+                    <li><a href="#estoque" class="nav-link">Estoque</a></li>
+                    <li><a href="#ofertas" class="nav-link">Ofertas da Semana</a></li>
+                    <li><a href="#baixou-preco" class="nav-link">Baixou de Preço</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Encontre o Carro dos Seus Sonhos</h2>
+            <p>Na Leonardo Motors você encontra os melhores carros com qualidade garantida e preços imbatíveis</p>
+            <a href="#estoque" class="cta-button">Ver Estoque</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sobre a Loja -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre a Leonardo Motors</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Com mais de 15 anos de experiência no mercado automotivo, a Leonardo Veículos se consolidou como referência em qualidade e confiança na venda de veículos seminovos e usados.</p>
+                    <p>Nossa missão é oferecer aos nossos clientes os melhores veículos, com procedência garantida, preços justos e um atendimento diferenciado que supera expectativas.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Garantia</h3>
+                            <p>Todos os veículos com garantia</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <h3>Revisados</h3>
+                            <p>Veículos revisados e vistoriados</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Confiança</h3>
+                            <p>Líder de Vendas e referência no mercado automotivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estoque -->
+    <section id="estoque" class="inventory">
+        <div class="container">
+            <h2>Nosso Estoque</h2>
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- Veículos serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas da Semana -->
+    <section id="ofertas" class="weekly-offers">
+        <div class="container">
+            <h2>Ofertas da Semana</h2>
+            <div class="offers-grid" id="offersGrid">
+                <!-- Ofertas serão inseridas via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Baixou de Preço -->
+    <section id="baixou-preco" class="price-drop">
+        <div class="container">
+            <h2>Baixou de Preço</h2>
+            <div class="price-drop-grid" id="priceDropGrid">
+                <!-- Veículos com preço reduzido serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Av. Principal, 1234 - Centro<br>São Paulo - SP, 01234-567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(11) 9 8765-4321</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>contato@leonardoveiculos.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 16h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0977!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sSé%2C%20São%20Paulo%20-%20SP!5e0!3m2!1spt!2sbr!4v1234567890123"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Leonardo MOTORS</h3>
+                    <p>Sua loja de carros de confiança há mais de 15 anos no mercado.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#estoque">Estoque</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9 8765-4321</p>
+                    <p><i class="fas fa-envelope"></i> contato@Leonardo.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Leonardo Motors. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511987654321?text=Olá! Gostaria de mais informações sobre os veículos da Leonardo Veículos." 
+       class="whatsapp-float" target="_blank" aria-label="Contato WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Vehicle Modal -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Conteúdo do modal será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.ts"></script>
+</body>
+</html>
